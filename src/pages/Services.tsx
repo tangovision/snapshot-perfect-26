@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Car, Navigation2, Crown, HelpCircle, ArrowLeft, MapPin, Clock, Star, CreditCard, Plug, Users } from "lucide-react";
+import { Zap, Car, Navigation2, Crown, HelpCircle, ArrowLeft, MapPin, Clock, Star, CreditCard, Plug, Users, type LucideIcon } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import evChargingImage from "@/assets/ev-charging.jpg";
 import valetImage from "@/assets/valet.jpg";
@@ -15,7 +15,7 @@ import { useState } from "react";
 
 interface Service {
   id: string;
-  icon: any;
+  icon: LucideIcon;
   title: string;
   description: string;
   image: string;
@@ -24,7 +24,7 @@ interface Service {
 
 interface ServiceDetails {
   fullDescription: string;
-  features: { icon: any; label: string; value: string }[];
+  features: { icon: LucideIcon; label: string; value: string }[];
   pricing?: { label: string; price: string }[];
   cta: string;
 }
